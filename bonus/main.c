@@ -6,7 +6,7 @@
 /*   By: almeddah <almeddah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 13:41:46 by lleborgn          #+#    #+#             */
-/*   Updated: 2024/08/18 16:51:22 by almeddah         ###   ########.fr       */
+/*   Updated: 2024/08/18 19:32:38 by almeddah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	convert_tab(int **arg_tab_int, char **arg_tab, int arg_nb)
 	int	i;
 
 	i = 1;
-	*arg_tab_int = malloc(sizeof(int) * arg_nb + 1);
+	*arg_tab_int = malloc(sizeof(int) * (arg_nb + 1));
 	(*arg_tab_int)[0] = arg_nb / 4;
 	while (i - 1 < arg_nb)
 	{
@@ -107,9 +107,11 @@ int	main(int argc, char **argv)
 			if (tab[0][0] != 0)
 			{
 				print_rush(tab, arg_nb);
+				free_all(tab, arg_tab_int, arg_tab);
 				return (0);
 			}
 		}
+		free_all(0, 0, arg_tab);
 	}
 	write(1, "Error\n", 6);
 	return (0);

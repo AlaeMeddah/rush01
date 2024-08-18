@@ -6,7 +6,7 @@
 /*   By: almeddah <almeddah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 13:02:59 by almeddah          #+#    #+#             */
-/*   Updated: 2024/08/18 16:37:15 by almeddah         ###   ########.fr       */
+/*   Updated: 2024/08/18 18:52:49 by almeddah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int		check_line_left(int **tab, int l_num, int arg, int arg_nb);
 int		check_line_right(int **tab, int l_num, int arg, int arg_nb);
 int		check_col_up(int **tab, int c_num, int arg, int arg_nb);
 int		check_col_down(int **tab, int c_num, int arg, int arg_nb);
+void	free_all(int **tab, int *arg_tab_int, char **arg_tab);
 
 #endif

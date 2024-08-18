@@ -6,7 +6,7 @@
 /*   By: almeddah <almeddah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 11:06:49 by almeddah          #+#    #+#             */
-/*   Updated: 2024/08/18 14:40:54 by almeddah         ###   ########.fr       */
+/*   Updated: 2024/08/18 19:20:41 by almeddah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ char	**ft_split(char *str, char sep)
 		if (*str)
 		{
 			str_sep[j] = malloc(sizeof(char) * (i + 1));
-			ft_strncat(str_sep[j], str, i);
+			str_sep[j][0] = '\0';
+			ft_strncat(str_sep[j++], str, i);
 		}
-		j++;
 		str += i;
 	}
 	str_sep[j] = 0;
